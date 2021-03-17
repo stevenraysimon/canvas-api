@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <audio id="mouse" src="sounds/mouse.mp3"></audio>
+    <audio id="agh" src="sounds/agh.mp3"></audio>
+</head>
+<style>
+    #board{
+        width: 640px;
+        height: 480px;
+        margin: auto;
+        position: relative;
+        background-color: #3B1B04;
+    }
+    
+    img{
+        cursor: pointer;
+    }
+    #remain{
+        font-family: monospace;
+        font-size: 2em;
+        padding: 10px;
+        color: #99460B;
+        float: left;
+    }
+    h1{
+        font-family: monospace;
+        font-size: 2.5em;
+        padding: 10px;
+        color: #99460B;
+    }
+    button{
+        padding: 5px 8px;
+        font-size: 1em;
+        font-family: monospace;
+        color: white;
+        background-color: #EB531C;
+        border: none;
+        outline: 0;
+        position: relative;
+        margin: auto;
+        
+    }
+    button:active{
+        background-color: #9C3713;
+    }
+    .flex{
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+    .flex div{
+        text-align: center;
+    }
+    #count{
+        float: right;
+        font-family: monospace;
+        font-size: 2em;
+        padding: 10px;
+        color: #99460B;
+    }
+</style>
+<body>
+    <div id="board">
+        <span id="remain"></span>
+        <span id="count"></span>
+        <div class="flex"><div><h1 id="title">Whack-a-mole</h1><button id="start">Start</button></div></div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

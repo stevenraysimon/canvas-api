@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <title>Canvas API</title>
+</head>
+<style>
+    canvas{
+        background-color: #eee;
+    }
+</style>
+<body>
+    <div id="board">
+        <canvas width="640" height="480"></canvas>
+    </div>
+    <script>
+        const canvas = document.querySelector("#board canvas");
+        const ctx = canvas.getContext("2d"); //context of canvas, courld be webgl, etc.
+        console.log(ctx.canvas);
+        
+        const deg2Rad = deg => (Math.PI /180) * deg;
+        const rad2Deg = rad => (180 / Math.PI) * rad;
+        
+        const round = num => Math.floor(num * 100)/100;
+        
+        console.log(round(rad2Deg(20)));
+        console.log(round(deg2Rad(180)));
+        
+        //Set colors
+        ctx.strokeStyle ="black";
+        ctx.fillStyle ="red";
+        
+        //Rectangle
+        ctx.fillRect(300, 200, 50, 50);
+        ctx.strokeRect(300, 200, 50, 50);
+        
+        ctx.beginPath();
+        ctx.arc(325, 170, 25, 0, Math.PI*2, false);
+        ctx.fill();
+        ctx.stroke();
+    </script>
+</body>
+</html>
